@@ -116,19 +116,6 @@ function playGame(){
             gameResult.textContent = `Sorry! The computer wins the game with a score of ${computerScore} to ${playerScore}`;
         }
     });
-
-        
-        
-            
-        
-    
-    // if (playerScore > computerScore){
-    //     console.log("WON! The result is " + playerScore + ":" + computerScore);
-    // } else if (playerScore < computerScore){
-    //     console.log("LOST! The result is " + playerScore + ":" + computerScore);
-    // } else if (playerScore === computerScore){
-    //     console.log("DRAW! The result is " + playerScore + ":" + computerScore);
-    // }
 }
 
 playGame();
