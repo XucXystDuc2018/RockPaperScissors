@@ -1,0 +1,23 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#btns{
+    text-align: center;
+}
+
+button{
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid green;
+    font-size: large;
+    background-color: #04AA6D;
+    color: white;
+    cursor: pointer;
+}

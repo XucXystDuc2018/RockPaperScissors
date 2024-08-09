@@ -65,6 +65,7 @@ function playRound(playerSelection, computerSelection){
 
 let btns = document.querySelector('#btns');
 const gameResult = document.querySelector('#result');
+const choices = document.querySelector("#choice");
 
 function playGame(){
     let playerScore = 0, computerScore = 0;
@@ -85,16 +86,19 @@ function playGame(){
                 playerSelection = "rock";
                 computerSelection = getComputerChoice();
                 result = playRound(playerSelection, computerSelection);
+                choices.textContent = `Your choice: ${playerSelection}, computer choice: ${computerSelection}`;
                 break;
             case 'paper-btn':
                 playerSelection = "paper";
                 computerSelection = getComputerChoice();
                 result = playRound(playerSelection, computerSelection);
+                choices.textContent = `Your choice: ${playerSelection}, computer choice: ${computerSelection}`;
                 break;
             case 'scissors-btn':
                 playerSelection = "scissors";
                 computerSelection = getComputerChoice();
                 result = playRound(playerSelection, computerSelection);
+                choices.textContent = `Your choice: ${playerSelection}, computer choice: ${computerSelection}`;
                 break;
         }
 
