@@ -57,19 +57,22 @@ function playRound(playerSelection, computerSelection){
             result = compareScissors(computer);
             break;
         default:
+            return;
     }
     
     return result;
 
 }
 
-let btns = document.querySelector('#btns');
+const btns = document.querySelector('#btns');
 const gameResult = document.querySelector('#result');
 const choices = document.querySelector("#choice");
+const scoreBoard = document.querySelector("#score");
+const retryBtn = document.querySelector("#retry-btn");
+
+let playerScore = 0, computerScore = 0;
 
 function playGame(){
-    let playerScore = 0, computerScore = 0;
-    const scoreBoard = document.querySelector("#score");
     scoreBoard.textContent = `Player Score: ${playerScore}, Computer Score: ${computerScore}`;
 
     btns.addEventListener('click', (event) => {
@@ -122,4 +125,15 @@ function playGame(){
     });
 }
 
+retryBtn.addEventListener('click', () => {
+    playerScore = 0;
+    computerScore = 0;
+    gameResult.textContent = "";
+    choices.textContent = "";
+    scoreBoard.textContent = "";
+})
+
 playGame();
+//I know this coding is really bad with little to no reusable code, but hey it's one of my first project
+//just need to make sure not to reuse the playGame() function multiple times if you were to modify the code
+// or else the eventlistener inside would just multiply
